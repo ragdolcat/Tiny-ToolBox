@@ -17,5 +17,5 @@ Tiny-Toolbox contain 3 possible programs you can run
 ## Installation
 
 1. Download and extract Tiny-ToolBox.zip in Realease
-2. run  **"Tiny-Toolbox.exe"**
+2. run  **"main.exe"**
 4. You are ready to go!
