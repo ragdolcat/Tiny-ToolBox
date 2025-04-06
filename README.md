@@ -6,7 +6,7 @@ A collection of simple Python tools for password generation, brute forcing, and 
 
 ##  About
 
-Tiny-Toolbox contain 3 possible programs you can run
+Tiny-Toolbox is a school project that contain 3 possible programs you can run :
 
 - **Brute force** : Brute Force can create password in a txt file for brute forcing. It can also try those password on a zipfile
 - **Simple Password Generator** : As the name suggested it generate password
