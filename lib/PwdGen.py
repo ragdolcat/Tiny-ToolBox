@@ -16,13 +16,18 @@ def passwordGenerator(passwordLength, numberOfSpecialChars, numberOfNumbers):
   password = ""
 
   #generation of the number of special characters and digits in the password
-  if numberOfSpecialChars == 0:
+  if numberOfNumbers == 0:
      shuffledNumberOfNumbers  = 0
+  elif numberOfNumbers > passwordLength // 3:
+      shuffledNumberOfNumbers = passwordLength // 3
   else:
-    shuffledNumberOfNumbers = random.randint(numberOfNumbers, passwordLength // 3)
+      shuffledNumberOfNumbers = random.randint(numberOfNumbers, passwordLength // 3)
+  
     
   if numberOfSpecialChars  == 0:
      shuffledNumberOfSpecialChars   = 0
+  elif numberOfSpecialChars > passwordLength // 3:
+      shuffledNumberOfSpecialChars = passwordLength // 3
   else:
     shuffledNumberOfSpecialChars = random.randint(numberOfSpecialChars, passwordLength // 3)
 
@@ -95,6 +100,9 @@ def mainPwdGen():
       numberOfNumbers = int(numberOfNumbers)
       if numberOfNumbers < 0 or numberOfNumbers > passwordLength:
         print("Please enter a number between 0 and ", passwordLength)
+        continue
+      elif numberOfNumbers + numberOfSpecialChars > passwordLength:
+        print("The sum of the number of special characters and numbers must be less than the length of the password")
         continue
       break
     except ValueError:
