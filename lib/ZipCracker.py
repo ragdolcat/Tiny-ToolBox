@@ -1,4 +1,5 @@
 import zipfile
+import zlib
 
 #V1.0
 #find a password to extract a zip file
@@ -84,5 +85,6 @@ def ZipCrackerMain():
         except zipfile.LargeZipFile:
             print("The zip file is too large to be processed.")
             break
-        except RuntimeError:
+        except (RuntimeError, zlib.error):
+            # RuntimeError is raised when the password is wrong
             print("wrong password, trying again...")
